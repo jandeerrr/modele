@@ -1,0 +1,248 @@
+
+:root {
+    --branco: #ffffff;
+    --fundo: #fff8fa;
+    --rosa-claro: #f4dce4;
+    --rosa: #d99baf;
+    --rosa-escuro: #b77d91;
+    --texto: #684958;
+    --champagne: #d8c1a7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CABEÇALHO */
+
+.topo {
+    width: 100%;
+    padding: 25px 20px;
+    background: var(--branco);
+    text-align: center;
+    border-bottom: 1px solid #f5e8ed;
+}
+
+.logo {
+    text-decoration: none;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo span {
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--texto);
+}
+
+.logo small {
+    margin-top: 7px;
+    font-size: 11px;
+    letter-spacing: 6px;
+    color: var(--rosa-escuro);
+}
+
+/* ÁREA PRINCIPAL */
+
+.principal {
+    flex: 1;
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 20px;
+
+    background:
+    linear-gradient(
+        rgba(255, 248, 250, 0.65),
+        rgba(255, 248, 250, 0.82)
+    ),
+    url("./imagens/banner.jpg");
+
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+/* CONTEÚDO */
+
+.apresentacao {
+    width: 100%;
+    max-width: 850px;
+    text-align: center;
+}
+
+.conteudo {
+    max-width: 650px;
+    margin: auto;
+}
+
+.decoracao {
+    font-size: 32px;
+    color: var(--champagne);
+    margin-bottom: 15px;
+}
+
+.subtitulo {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--rosa-escuro);
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-size: clamp(38px, 6vw, 64px);
+    line-height: 1.15;
+    font-weight: 600;
+    color: var(--texto);
+    margin-bottom: 22px;
+}
+
+h1 span {
+    display: block;
+    color: var(--rosa-escuro);
+}
+
+.conteudo p {
+    max-width: 510px;
+    margin: 0 auto 35px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #947985;
+}
+
+/* BOTÃO DA LOJA */
+
+.botao {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+
+    padding: 19px 34px;
+
+    background: var(--rosa);
+    color: var(--branco);
+
+    text-decoration: none;
+    border-radius: 50px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+
+    box-shadow: 0 10px 25px rgba(183, 125, 145, 0.25);
+
+    transition: all 0.3s ease;
+}
+
+.botao:hover {
+    background: var(--rosa-escuro);
+    transform: translateY(-3px);
+    box-shadow: 0 14px 28px rgba(183, 125, 145, 0.30);
+}
+
+.botao span {
+    font-size: 21px;
+}
+
+/* FRASE INFERIOR */
+
+.informacao {
+    margin-top: 35px;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--rosa-escuro);
+}
+
+.informacao span {
+    color: var(--champagne);
+    margin: 0 7px;
+}
+
+/* RODAPÉ */
+
+footer {
+    padding: 25px 15px;
+    background: #fff;
+    text-align: center;
+    border-top: 1px solid #f5e8ed;
+}
+
+footer p {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--texto);
+    margin-bottom: 8px;
+}
+
+footer small {
+    font-size: 11px;
+    color: #b58b99;
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .topo {
+        padding: 23px 10px;
+    }
+
+    .logo span {
+        font-size: 22px;
+        letter-spacing: 3px;
+    }
+
+    .principal {
+        min-height: 570px;
+        padding: 60px 22px;
+        background-position: center;
+    }
+
+    .subtitulo {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    .conteudo p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .botao {
+        width: 100%;
+        padding: 19px 15px;
+        font-size: 11px;
+        gap: 12px;
+    }
+
+    .informacao {
+        font-size: 9px;
+        letter-spacing: 1.5px;
+    }
+
+    footer {
+        padding: 22px 10px;
+    }
+}
